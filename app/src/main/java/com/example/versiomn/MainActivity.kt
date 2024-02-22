@@ -19,27 +19,25 @@ class MainActivity : AppCompatActivity() {
 
         imageView.setOnClickListener { view ->
             if (Build.VERSION.SDK_INT >= 33) {
-                /*
+
                 arrayListOf(
                     android.Manifest.permission.CAMERA
                 )
-                */
+
                 imageView.setImageResource(R.drawable.omnithicc)
                 Toast.makeText(this, "Version Android >= 13", Toast.LENGTH_LONG).show()
 
 
             } else {
-                /*
+
                 arrayListOf(
                     android.Manifest.permission.CAMERA,
                     android.Manifest.permission.WRITE_EXTERNAL_STORAGE
                 )
-                */
+
                 imageView.setImageResource(R.drawable.omnojao)
                 Toast.makeText(this, "Version Android < 13", Toast.LENGTH_LONG).show()
             }
         }
     }
-
-
 }
